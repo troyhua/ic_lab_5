@@ -4,6 +4,10 @@
       "main": "src/blog/main.mo",
       "type": "motoko"
     },
+    "blog2": {
+      "main": "src/blog/main.mo",
+      "type": "motoko"
+    },
     "blog_assets": {
       "dependencies": [
         "blog"
