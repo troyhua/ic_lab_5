@@ -8,6 +8,14 @@
       "main": "src/blog/main.mo",
       "type": "motoko"
     },
+    "blog3": {
+      "main": "src/blog/main.mo",
+      "type": "motoko"
+    },
+    "blog4": {
+      "main": "src/blog/main.mo",
+      "type": "motoko"
+    },
     "blog_assets": {
       "dependencies": [
         "blog"

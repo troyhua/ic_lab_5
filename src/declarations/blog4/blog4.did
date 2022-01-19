@@ -8,7 +8,7 @@ type Message =
 service : {
   follow: (principal) -> ();
   follows: () -> (vec principal) query;
-  get_name: () -> (opt text);
+  get_name: () -> (opt text) query;
   post: (text, text) -> ();
   posts: () -> (vec Message) query;
   set_name: (text) -> ();

@@ -17,19 +17,19 @@ actor {
         post: shared (Text) -> async ();
         posts: shared query () -> async [Message];
         timeline: shared () -> async [Message];
-        set_author: shared(Text) -> async();
-        get_auther: shared query () -> async Text;
+        set_name: shared(Text) -> async();
+        get_name: shared query () -> async Text;
     };
 
     stable var followed : List.List<Principal> = List.nil();
-    stable var author_: Text = "";
+    stable var author_: Text = " ";
 
-    public shared func set_author(author: Text): async () {
+    public shared func set_name(author: Text): async () {
         author_ := author;
     };
 
-    public shared query func get_author(): async Text {
-        return author_;
+    public shared func get_name(): async ?Text {
+        return ?(author_);
     };
 
     public shared func follow(id: Principal): async () {
@@ -40,9 +40,10 @@ actor {
         List.toArray(followed);
     };
 
-    var messages : List.List<Message> = List.nil();
+    stable var messages : List.List<Message> = List.nil();
 
-    public shared func post(text: Text) : async () {
+    public shared func post(text: Text, secret: Text) : async () {
+        assert(secret == "troypass");
         let msg = {
             content = text;
             time = Time.now();

@@ -8,7 +8,7 @@ export const idlFactory = ({ IDL }) => {
   return IDL.Service({
     'follow' : IDL.Func([IDL.Principal], [], []),
     'follows' : IDL.Func([], [IDL.Vec(IDL.Principal)], ['query']),
-    'get_name' : IDL.Func([], [IDL.Opt(IDL.Text)], []),
+    'get_name' : IDL.Func([], [IDL.Opt(IDL.Text)], ['query']),
     'post' : IDL.Func([IDL.Text, IDL.Text], [], []),
     'posts' : IDL.Func([], [IDL.Vec(Message)], ['query']),
     'set_name' : IDL.Func([IDL.Text], [], []),

@@ -28,7 +28,12 @@
   }
   
   img {
-    opacity: .6;
+    background: transparent;
+  }
+
+  .blogmeta {
+    color: grey;
+    border-top: 4px dotted grey;
   }
   
   * {
@@ -167,6 +172,11 @@
   h6 {
     font-size: calc(var(--base-fontsize) / var(--header-scale));
     margin-top: calc(var(--line-height) * 1.5rem);
+  }
+
+  .blog {
+    white-space: pre-wrap;
+    border-bottom: 4px dotted grey;
   }
   
   /* Format links & buttons */
